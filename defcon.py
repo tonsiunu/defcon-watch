@@ -36,7 +36,7 @@ async def loop(app):
 
         while True:
             try:
-                cont = requests.get("https://fantasy.premierleague.com/api/fixtures/?event=12").json()
+                cont = requests.get("https://fantasy.premierleague.com/api/fixtures/?event=12").json() # change the event=x to the current gameweek (TODO automate this)
             except Exception:
                 print("connection error")
                 await asyncio.sleep(5)
